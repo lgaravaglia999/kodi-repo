@@ -1,8 +1,20 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="repository.cava" name="Streaming Italia" provider-name="Luca" version="1.0">
-  <extension point="xbmc.addon.repository">
-    <info compressed="false">https://github.com/lgaravaglia999/kodi-repo/raw/master/zips/addons.xml</info>
-    <checksum>https://github.com/lgaravaglia999/kodi-repo/raw/master/zips/addons.xml.md5</checksum>
-    <datadir zip="true">https://github.com/lgaravaglia999/kodi-repo/raw/master/zips/</datadir>
-  </extension>
-</addon></addons>  
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.cava" name="Streaming Italia" version="1.0" provider-name="Luca">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://github.com/lgaravaglia999/kodi-repo/raw/master/zips/addons.xml</info>
+            <checksum>https://github.com/lgaravaglia999/kodi-repo/raw/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://github.com/lgaravaglia999/kodi-repo/raw/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>REPO_NAME_HERE</summary>
+        <description>DESCRIPTION OF YOUR REPO HERE</description>
+        <disclaimer></disclaimer>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
