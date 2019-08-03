@@ -20,7 +20,7 @@ class FPTScraper(object):
     def get_filmpertutti_domain(self):
         #check and return current domain
         try:
-            soup = scraper_lib.get_page_soup(self.url_check_domain)
+            soup = scraper_lib.get_page_soup(self.url_check_domain, timeout=5)
 
             wrapper = scraper_lib.Container(block=soup, tag='div', first=True,
                 container_class="content").get_container()

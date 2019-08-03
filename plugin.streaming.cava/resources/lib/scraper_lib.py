@@ -61,8 +61,8 @@ class Container:
 
 
 
-def get_page_soup(url):
-    results_page = requests.get(url)
+def get_page_soup(url, timeout=20):
+    results_page = requests.get(url, timeout=timeout)
     results = results_page.text
     soup = BeautifulSoup(results, 'html.parser')
     return soup
