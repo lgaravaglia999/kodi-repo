@@ -11,7 +11,8 @@ class FPTScraper(object):
         self.url_check_domain = "https://www.filmpertutti.group/"
         self.filmpertutti_url = "{0}/?s={1}"
 
-        self.default_domain = "https://www.filmpertutti.media"
+        #self.default_domain = "https://www.filmpertutti.media"
+        self.default_domain = "https://www.filmpertutti.pub"
         self.domain = self.get_filmpertutti_domain()
 
         self.streaming_to_scrape = ["speedvideo", "openload", "rapidcrypt.net/open"]
