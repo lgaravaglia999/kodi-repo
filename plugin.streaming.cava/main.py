@@ -309,7 +309,8 @@ def route(mode):
         keyword = user_input()
         if keyword is not None:
             movie = Movies()
-            movie.scrape(keyword)
+            direct_url = movie.get_by_exact_name(keyword)
+            movie.scrape(direct_url)
             movie_urls = movie.get_movies_url()
             movie_title = keyword
             show_scraped_url(movie_title, movie_urls)
