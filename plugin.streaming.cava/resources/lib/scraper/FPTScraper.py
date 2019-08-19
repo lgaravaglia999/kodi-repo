@@ -67,7 +67,3 @@ class FPTScraper(object):
         title = keyword.replace(' ', '-')
         fpt_direct_url = self.domain + "/" + title
         return fpt_direct_url
-
-
-#fpt = FPTScraper()
-#print(fpt.get_by_exact_name('mr nobody'))
