@@ -62,3 +62,12 @@ class FPTScraper(object):
 
     def filter_streamings(self, href):
         return href and any(s in href for s in self.streaming_to_scrape)
+
+    def get_by_exact_name(self, keyword):
+        title = keyword.replace(' ', '-')
+        fpt_direct_url = self.domain + "/" + title
+        return fpt_direct_url
+
+
+#fpt = FPTScraper()
+#print(fpt.get_by_exact_name('mr nobody'))

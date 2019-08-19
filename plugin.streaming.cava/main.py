@@ -291,6 +291,8 @@ def get_tmdb_tv_results(tmdb_type, page=1, keyword=None):
 
 def route(mode):
     if mode is None:
+        add_menu_item({'mode' : 'direct_menu', 'choice' : 'direct', 'type': 'exact_title'}, 'Cerca titolo ESATTO')
+
         add_menu_item({'mode' : 'menu', 'choice' : 'movies', 'type': 'keyword'}, 'Cerca Film')
         add_menu_item({'mode' : 'menu', 'choice' : 'movies', 'type': 'most_popular'}, 'Cerca tra i film piu popolari')
         add_menu_item({'mode' : 'menu', 'choice' : 'movies', 'type': 'most_voted'}, 'Cerca tra i film piu votati')
@@ -303,6 +305,15 @@ def route(mode):
 
         xbmcplugin.endOfDirectory(addon_handle)
 
+    elif mode[0] == 'direct_menu':
+        keyword = user_input()
+        if keyword is not None:
+            movie = Movies()
+            movie.scrape(keyword)
+            movie_urls = movie.get_movies_url()
+            movie_title = keyword
+            show_scraped_url(movie_title, movie_urls)
+
     elif mode[0] == 'menu':
         choice = args['choice'][0]
         tmdb_type = args['type'][0]
@@ -314,7 +325,7 @@ def route(mode):
             if tmdb_type == "keyword":
                 keyword = user_input()
                 if keyword is not None:
-                    results = get_tmdb_movie_results(tmdb_type, page, keyword)        
+                    results = get_tmdb_movie_results(tmdb_type, page, keyword)
             else:
                 results = get_tmdb_movie_results(tmdb_type, page)
 

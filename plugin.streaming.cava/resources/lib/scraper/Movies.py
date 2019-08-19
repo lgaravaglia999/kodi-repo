@@ -32,10 +32,14 @@ class Movies(FPTScraper):
         return movies_url
 
 if __name__ == "__main__":
-    movie = Movies()
-    res = movie.get_result_from_fpt('alita')
-    url = res[1]["url"]
+    # movie = Movies()
+    # direct_url = movie.get_by_exact_name('it 2017')
+    # movie.scrape(direct_url)
+    # movie_urls = movie.get_movies_url()
+    # print(movie_urls)
+    # res = movie.get_result_from_fpt('alita')
+    # url = res[1]["url"]
 
-    movie.scrape(url)
-    movie_urls = movie.get_movies_url()
-    print(movie_urls)
+    # movie.scrape(url)
+    # movie_urls = movie.get_movies_url()
+    # print(movie_urls)
