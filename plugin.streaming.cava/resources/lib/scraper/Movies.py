@@ -1,11 +1,8 @@
 import sys
 import re
 from os import path
-sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
-
-from FPTScraper import FPTScraper
-
-import scraper_lib
+from resources.lib import scraper_lib
+from resources.lib.scraper.FPTScraper import FPTScraper
 
 class Movies(FPTScraper):
 

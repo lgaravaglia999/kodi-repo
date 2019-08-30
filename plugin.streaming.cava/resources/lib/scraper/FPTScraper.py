@@ -1,8 +1,6 @@
 from os import path
 import sys
-
-sys.path.append( path.dirname( path.dirname( path.abspath(__file__) ) ) )
-import scraper_lib
+from resources.lib import scraper_lib
 
 class FPTScraper(object):
     def __init__(self, release_date=None):
