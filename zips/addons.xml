@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.streaming.cava" name="Streaming Italiano" version="0.2.9" provider-name="Luca">
+<addon id="plugin.streaming.cava" name="Streaming Italiano" version="0.2.10" provider-name="Luca">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.routing" version="0.2.0"/>
         <import addon="script.module.simplejson" version="3.3.0"/>
-        <import addon="script.module.urlresolver" version="5.0.47"/>
+        <!-- <import addon="script.module.urlresolver" version="5.0.47"/> -->
         <import addon="script.module.beautifulsoup4" version="4.5.3"/>
         <import addon="script.module.requests" version="2.22.0"/>
     </requires>
